@@ -1,0 +1,62 @@
+{
+  "name": "perf-report",
+  "version": "0.0.1",
+  "description": "浏览器端性能数据上报",
+  "main": "./dist/bundle-umd.js",
+  "module": "./dist/bundle-esm.js",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "postversion": "git push"
+  },
+  "keywords": [
+    "performance",
+    "report"
+  ],
+  "author": "zhangshenghao",
+  "license": "ISC",
+  "dependencies": {
+    "ua-parser-js": "^0.7.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-uglify-es": "0.0.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  }
+}
